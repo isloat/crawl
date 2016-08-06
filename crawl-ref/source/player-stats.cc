@@ -109,7 +109,7 @@ bool attribute_increase()
     learned_something_new(HINT_CHOOSE_STAT);
     Popup *pop = new Popup("Increase Attributes");
     MenuEntry *status = new MenuEntry("", MEL_SUBTITLE);
-    pop->push_entry(new MenuEntry(stat_gain_message " Increase:", MEL_TITLE));
+    pop->push_entry(new MenuEntry(stat_gain_message + " Increase:", MEL_TITLE));
     pop->push_entry(status);
     MenuEntry *me = new MenuEntry("Strength", MEL_ITEM, 0, 'S', false);
     me->add_tile(tile_def(TILEG_FIGHTING_ON, TEX_GUI));
