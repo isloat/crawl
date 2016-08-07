@@ -35,7 +35,7 @@ then this is all you need to do!
 	- See random-pick.h to understand the variables.
 	- Add entries for each branch of the Dungeon the monster will spawn in.
 - /source/dat/descript/monsters.txt
-	- A short description of what the monster looks like and what it does.
+	- Describe what the monster looks like and what it does.
 
 Optional: 
 	- /source/mgen-enum.h
