@@ -64,6 +64,10 @@ any special abilities, spells, or unique behavior that the monster will have.
 		- Declare the spell here if you created a new spell.
 		- You will also need to declare the spell and some parameters in the 
 		appropriate spl-(school).cc file. 
+	- /rltiles/gui/
+		- Add spell icons here if any are applicable.
+	- /rltiles/dc-spells.txt
+		- Declare enum for spell icons. 
 
 
 - /source/mon-abil.cc
