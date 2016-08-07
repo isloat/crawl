@@ -20,14 +20,14 @@ have the monster exist and spawn. If your monster is as complex as an iguana,
 then this is all you need to do!
 
 
-- /source/enum-h.txt
-	- Does enum stuff.
+- /source/enum.h
+	- Defines monster type enumeration. 
 	- In monster_type, find similar monsters and add a new entry there.
 		- To preserve save compatability, you need to wrap that entry 
 		in #if TAG_MAJOR_VERSION > 34 #endif.
 	- In the '// Add new monsters here:' block, add another entry for the monster.
 - /source/mon-data.h
-	- Controls the base statistics and flags for monster. HD, speed, etc.
+	- Define the base statistics and flags for the monster. HD, speed, etc.
 	- Follow the conventions in the large comment block at the head of the file.
 	- Add an entry here near other similar monsters.
 - /source/mon-pick-data.h
@@ -35,7 +35,7 @@ then this is all you need to do!
 	- See random-pick.h to understand the variables.
 	- Add entries for each branch of the Dungeon the monster will spawn in.
 - /source/dat/descript/monsters.txt
-	- A short description of what it looks like and what it does.
+	- A short description of what the monster looks like and what it does.
 
 Optional: 
 	- /source/mgen-enum.h
@@ -64,9 +64,9 @@ any special abilities, spells, or unique behavior that the monster will have.
 		- Declare the spell here if you created a new spell.
 		- You will also need to declare the spell and some parameters in the 
 		appropriate spl-(school).cc file. 
-	- /rltiles/gui/
+	- /source/rltiles/gui/
 		- Add spell icons here if any are applicable.
-	- /rltiles/dc-spells.txt
+	- /source/rltiles/dc-spells.txt
 		- Declare enum for spell icons. 
 
 
@@ -98,7 +98,7 @@ These files handle the monster's visuals and other fluff. Become pretty today!
 	eventually be sorted.
 - /source/rltiles/dc-corpse.txt
 	- Add a corpse entry so the tile can be squashed. 
-	- Group it with the other monsters that will share its glyph.
+	- Group it with other monsters sharing its glyph.
 	- Name of the monster in lowercase, then 'CORPSE_MONSTERNAME'.
 
 
