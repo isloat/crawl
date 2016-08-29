@@ -208,6 +208,7 @@ error CRYSTAL_BOLT
 error DEATH_RATTLE
 error DIMENSION_ANCHOR
 error DISINTEGRATE
+error DREAM_DUST
 error DRUIDS_CALL
 %sdir gui/spells/monster
 earth_elementals EARTH_ELEMENTALS
