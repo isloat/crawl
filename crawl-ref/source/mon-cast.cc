@@ -4938,7 +4938,7 @@ dice_def resonance_strike_base_damage(const monster &mons)
     return dice_def(3, mons.spell_hd(SPELL_RESONANCE_STRIKE));
 }
 
-static void _sheep_message(int num_sheep, int sleep_pow, actor *foe)
+static void _sheep_message(int num_sheep, int sleep_pow, actor& foe)
 {
     string message = "";
 
@@ -4961,25 +4961,25 @@ static void _sheep_message(int num_sheep, int sleep_pow, actor *foe)
                                num_sheep == 1 ? "s its" : " their");
     }
 
-    if (!foe->is_player()) // Messaging for non-player targets
+    if (!foe.is_player()) // Messaging for non-player targets
     {
-        if (you.see_cell(foe->pos()) && sleep_pow)
+        if (you.see_cell(foe.pos()) && sleep_pow)
         {
-            mprf(foe->as_monster()->friendly() ? MSGCH_FRIEND_SPELL
-                                                  : MSGCH_MONSTER_SPELL,
+            mprf(foe.as_monster()->friendly() ? MSGCH_FRIEND_SPELL
+                                              : MSGCH_MONSTER_SPELL,
                  "As the sheep sparkle%s and sway%s, %s falls asleep.",
                  num_sheep == 1 ? "s": "",
                  num_sheep == 1 ? "s": "",
-                 foe->name(DESC_THE).c_str());
+                 foe.name(DESC_THE).c_str());
         }
         else // if dust strength failure for non-player
         {
-            mprf(foe->as_monster()->friendly() ? MSGCH_FRIEND_SPELL
-                                               : MSGCH_MONSTER_SPELL,
+            mprf(foe.as_monster()->friendly() ? MSGCH_FRIEND_SPELL
+                                              : MSGCH_MONSTER_SPELL,
                  "The dream sheep attempt%s to lull %s to sleep.",
                  num_sheep == 1 ? "s" : "",
-                 foe->name(DESC_THE).c_str());
-            mprf("%s is unaffected.", foe->name(DESC_THE).c_str());
+                 foe.name(DESC_THE).c_str());
+            mprf("%s is unaffected.", foe.name(DESC_THE).c_str());
         }
     }
     else
@@ -4989,11 +4989,11 @@ static void _sheep_message(int num_sheep, int sleep_pow, actor *foe)
     }
 }
 
-static void _dream_sheep_sleep(monster *mons, actor *foe)
+static void _dream_sheep_sleep(monster& mons, actor& foe)
 {
     // Shepherd the dream sheep.
     vector<monster*> dream_herd;
-    for (monster_near_iterator mi(foe->pos(), LOS_NO_TRANS); mi; ++mi)
+    for (monster_near_iterator mi(foe.pos(), LOS_NO_TRANS); mi; ++mi)
         if (mi->type == MONS_DREAM_SHEEP) dream_herd.push_back(*mi);
     const int num_sheep = dream_herd.size();
 
@@ -5009,7 +5009,7 @@ static void _dream_sheep_sleep(monster *mons, actor *foe)
     _sheep_message(num_sheep, sleep_pow, foe);
 
     // Put the player to sleep.
-    if (sleep_pow) foe->put_to_sleep(mons, sleep_pow, false);
+    if (sleep_pow) foe.put_to_sleep(&mons, sleep_pow, false);
 }
 
 /**
@@ -5233,7 +5233,7 @@ void mons_cast(monster* mons, bolt pbolt, spell_type spell_cast,
 
     // SPELL_SLEEP_GAZE ;)
     case SPELL_DREAM_DUST:
-        _dream_sheep_sleep(mons, foe);
+        _dream_sheep_sleep(*mons, *foe);
         return;
 
     case SPELL_CONFUSION_GAZE:
