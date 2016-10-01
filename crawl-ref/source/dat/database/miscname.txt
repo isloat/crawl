@@ -404,19 +404,22 @@ That @_fruit_type_@ was delicious!
 
 Mmm - a full handful of @_small_fruits_@!
 
+That choko was very bland.
+
 w:1
 That @_peel_fruit_@ was delicious! Even the peel tasted good!
 
 w:1
 That @_sour_fruit_@ was rather sour... but delicious nonetheless!
 
-That choko was very bland.
-
 w:1
 That durian smelled terrible... but tasted delicious!
 
 w:1
 That snozzcumber tasted truly putrid!
+
+w:1
+That draconion had a lot of delicious flavors!
 %%%%
 _fruit_type_
 

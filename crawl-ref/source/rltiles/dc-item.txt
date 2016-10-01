@@ -545,6 +545,7 @@ apple FOOD_FRUIT_FIRST
 apricot
 banana
 choko
+draconion
 grape
 lemon
 lychee
