@@ -295,12 +295,15 @@ static string _get_unseen_branches()
             continue;
 
         const branch_type branch = it->id;
+
+        // Did this branch generate this game?
         if (!connected_branch_can_exist(branch))
             continue;
 
         if (branch == BRANCH_VESTIBULE || !is_connected_branch(branch))
             continue;
 
+        // Did this branch actually make it into the game?
         if (branch_is_unfinished(branch))
             continue;
 

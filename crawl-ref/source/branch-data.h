@@ -5,7 +5,8 @@ const Branch branches[NUM_BRANCHES] =
     // Branch struct:
     //  branch id, parent branch, mindepth, maxdepth, depth, absdepth,
     //  branch flags
-    //  entry stairs, exit stairs, short name, long name, abbrev name
+    //  entry stairs, exit stairs, number of features
+    //  short name, long name, abbreviated name
     //  entry message
     //  floor colour, rock colour
     //  travel shortcut, runes, ambient noise level
@@ -107,6 +108,7 @@ const Branch branches[NUM_BRANCHES] =
       nullptr,
       LIGHTGREY, BROWN,
       'V', { RUNE_VAULTS }, BRANCH_NOISE_NORMAL },
+
 #if TAG_MAJOR_VERSION == 34
     { BRANCH_BLADE, BRANCH_VAULTS, 3, 4, 1, 21,
       BFLAG_NO_ITEMS,
@@ -181,6 +183,7 @@ const Branch branches[NUM_BRANCHES] =
       "You feel the power of the Orb interfering with translocations here.",
       BLACK, BLACK, // set per-map
       'Z', {}, BRANCH_NOISE_NORMAL },
+
 #if TAG_MAJOR_VERSION == 34
     { BRANCH_FOREST, BRANCH_VAULTS, 2, 3, 5, 19,
       BFLAG_SPOTTY,
