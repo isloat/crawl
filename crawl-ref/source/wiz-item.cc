@@ -1505,6 +1505,7 @@ static void _debug_rap_stats(FILE *ostat)
         "ARTP_SLOW",
         "ARTP_FRAGILE",
         "ARTP_SHIELDING",
+        "ARTP_RATSKIN",
     };
     COMPILE_CHECK(ARRAYSZ(rap_names) == ARTP_NUM_PROPERTIES);
 

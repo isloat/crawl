@@ -94,6 +94,7 @@
 # * poison:   Grants poison resistance.
 # * randapp:  Generated with a random artefact's appearance (used by
 #             strictly-bad unrands).
+# * ratskin:  Lets wearer summon rats.
 # * rmsl:     Passively repels missiles.
 # * rnd_tele: Induces random teleportation.
 # * seeinv:   Lets wearer see invisible.
@@ -878,7 +879,7 @@ STR:      -1
 INT:      -1
 DEX:      1
 LIFE:     1
-BOOL:     poison
+BOOL:     poison, ratskin
 
 NAME:     shield of the Gong
 OBJ:      OBJ_ARMOUR/ARM_SHIELD

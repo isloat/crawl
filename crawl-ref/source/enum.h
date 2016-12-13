@@ -280,10 +280,9 @@ enum ability_type
 #if TAG_MAJOR_VERSION == 34
     ABIL_EVOKE_TELEPORT_CONTROL,
     ABIL_EVOKE_TWISTER,
-    ABIL_MAX_EVOKE = ABIL_EVOKE_TWISTER,
-#else
-    ABIL_MAX_EVOKE = ABIL_EVOKE_FOG,
 #endif
+    ABIL_EVOKE_RATSKIN,
+    ABIL_MAX_EVOKE = ABIL_EVOKE_RATSKIN,
 
     // Divine abilities
     // Zin
@@ -4079,6 +4078,7 @@ enum artefact_prop_type
     ARTP_SLOW,
     ARTP_FRAGILE,
     ARTP_SHIELDING,
+    ARTP_RATSKIN,
     ARTP_NUM_PROPERTIES
 };
 

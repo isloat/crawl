@@ -57,6 +57,7 @@ my %field_type = (
     NO_UPGRADE => "bool",
     POISON   => "bool",
     RANDAPP  => "bool",
+    RATSKIN  => "bool",
     RCORR    => "bool",
     REGEN    => "num",
     RMSL     => "bool",
@@ -496,6 +497,7 @@ my @art_order = (
     "BASE_DELAY", "HP", "CLARITY", "BASE_ACC", "BASE_DAM", "\n",
     "RMSL", "FOG", "REGEN", "unused", "NO_UPGRADE", "RCORR", "\n",
     "RMUT", "unused", "CORRODE", "DRAIN", "SLOW", "FRAGILE", "\n",
+    "RATSKIN",
     "}",
 
     "equip_func", "unequip_func", "world_reacts_func", "melee_effects_func",

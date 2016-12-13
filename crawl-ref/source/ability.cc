@@ -338,6 +338,8 @@ static const ability_def Ability_List[] =
       1, 0, 100, 0, {FAIL_EVO, 40, 2}, abflag::NONE },
     { ABIL_EVOKE_FOG, "Evoke Fog",
       2, 0, 250, 0, {FAIL_EVO, 50, 2}, abflag::NONE },
+    { ABIL_EVOKE_RATSKIN, "Evoke Ratskin",
+      2, 0, 250, 0, {FAIL_EVO, 40, 2}, abflag::NONE },
 
     { ABIL_END_TRANSFORMATION, "End Transformation",
       0, 0, 0, 0, {}, abflag::NONE },
@@ -1493,6 +1495,11 @@ static bool _check_ability_possible(const ability_def& abil,
             return false;
         }
         return true;
+
+    case ABIL_EVOKE_RATSKIN:
+    {
+        return cast_summon_small_mammal(50, GOD_NO_GOD, false);
+    }
 
     case ABIL_GOZAG_POTION_PETITION:
         return gozag_setup_potion_petition(quiet);

@@ -145,6 +145,10 @@ Evoke Fog ability
 
 Releases a thick cloud of fog to obscure vision.
 %%%%
+Evoke Ratskin ability
+
+Summons a few rats to accompany you.
+%%%%
 End Transformation ability
 
 Reverts you to your normal form.
