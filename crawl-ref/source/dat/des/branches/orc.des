@@ -1919,7 +1919,7 @@ ENDMAP
 # those moneychangers out, anyway...?)
 # Outer shops are for common orc pilgrims, inner shops only for the initiated.
 NAME: pf_orc_diabolical
-TAGS: patrolling no_item_gen no_monster_gen transparent
+TAGS: patrolling no_item_gen no_monster_gen transparent pan_entry
 PLACE: Orc:$
 ORIENT: float
 MONS: orc / nothing w:5, orc warrior / nothing w:5

@@ -2740,7 +2740,7 @@ ENDMAP
 # Standard occultist works do make demons out of distorted animals, after all.
 #
 NAME:    evil_forest
-TAGS:    no_pool_fixup no_wall_fixup no_monster_gen no_rotate
+TAGS:    no_pool_fixup no_wall_fixup no_monster_gen no_rotate hell_entry
 PLACE:   Lair:$
 ORIENT:  southeast
 WEIGHT:  5
