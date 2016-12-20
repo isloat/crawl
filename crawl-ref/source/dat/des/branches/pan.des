@@ -183,12 +183,7 @@ function pan_lord_vault_contents(e, anyglyph, commonglyph, greaterglyph)
 end
 
 function pan_entry_feature(e, glyph)
-    e.tags("extra luniq_enter_pan chance_enter_pan")
--- Late D entries for save compat, remove when TAG_MAJOR_VERSION > 34
-    e.depth("Depths, D:21-")
-    e.depth_chance("Depths:3", 10000)
-    e.depth_chance("D:24", 10000)
-    e.chance(2500)
+    e.tags("pan_entry")
     e.kfeat(glyph .. " = enter_pandemonium")
 end
 
@@ -254,7 +249,7 @@ default-depth: Depths
 # The generic entry; this is the one that should place in encompass vaults.
 # Has a higher weight than everything else.
 NAME: pan_entry
-TAGS: allow_dup overwrite_floor_cell no_exits replace_portal transparent
+TAGS: overwrite_floor_cell no_exits replace_portal transparent pan_entry
 TAGS: fallback_enter_pan
 WEIGHT: 50
 : pan_entry_feature(_G, 'O', true)
@@ -264,7 +259,7 @@ ENDMAP
 
 # Other entries; these ones are derived from rand_demon Pan vaults.
 NAME:   rand_demon_pan_entry_1
-TAGS:   transparent
+TAGS:   transparent pan_entry
 MONS:   common demon
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
@@ -282,7 +277,7 @@ x@@xxxxxxxx
 ENDMAP
 
 NAME:   rand_demon_pan_entry_3
-TAGS:   transparent
+TAGS:   transparent pan_entry
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
 MAP
@@ -301,7 +296,7 @@ MAP
 ENDMAP
 
 NAME:   rand_demon_pan_entry_4
-TAGS:   transparent
+TAGS:   transparent pan_entry
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
 MAP
@@ -319,7 +314,7 @@ MAP
 ENDMAP
 
 NAME:   rand_demon_pan_entry_5
-TAGS:   transparent
+TAGS:   transparent pan_entry
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
 MAP
@@ -338,7 +333,7 @@ MAP
 ENDMAP
 
 NAME:   rand_demon_pan_entry_7
-TAGS:   transparent
+TAGS:   transparent pan_entry
 NSUBST: ? = 1:O / 4:1 / *:.
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
@@ -358,7 +353,7 @@ MAP
 ENDMAP
 
 NAME:   rand_demon_pan_entry_8
-TAGS:   transparent
+TAGS:   transparent pan_entry
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
 MAP
@@ -377,7 +372,7 @@ MAP
 ENDMAP
 
 NAME:   rand_demon_pan_entry_9
-TAGS:   transparent
+TAGS:   transparent pan_entry
 NSUBST: ^ = 4:1 / *:.
 : pan_entry_feature(_G, 'O')
 : pan_entry_vault_contents(_G, 'O')
@@ -400,7 +395,7 @@ ENDMAP
 # More entries based on panlord vaults.
 
 NAME:  grunt_pan_entry_in_and_out
-TAGS:  transparent
+TAGS:  transparent pan_entry
 SUBST: d = 112
 : pan_entry_feature(_G, 'e')
 : pan_entry_vault_contents(_G, 'e')
@@ -420,7 +415,7 @@ MAP
 ENDMAP
 
 NAME:  grunt_pan_entry_spiral
-TAGS:  transparent
+TAGS:  transparent pan_entry
 SUBST: d = 112
 : pan_entry_feature(_G, 'e')
 : pan_entry_vault_contents(_G, 'e')
@@ -440,7 +435,7 @@ MAP
 ENDMAP
 
 NAME:  grunt_pan_entry_zigzag
-TAGS:  transparent
+TAGS:  transparent pan_entry
 SUBST: d = 112
 : pan_entry_feature(_G, 'e')
 : pan_entry_vault_contents(_G, 'e')
@@ -460,6 +455,7 @@ MAP
 ENDMAP
 
 NAME:  grunt_pan_entry_sceptre
+TAGS:  pan_entry
 SUBST: d = 112
 : pan_entry_feature(_G, 'e')
 : pan_entry_vault_contents(_G, 'e')

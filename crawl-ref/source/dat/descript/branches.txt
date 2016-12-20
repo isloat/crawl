@@ -94,7 +94,7 @@ Hell
 The Vestibule of Hell is guarded by Geryon, along with various denizens of
 each of the hells themselves.
 
-Portals to the Vestibule of Hell are found abundantly in the Depths.
+A dungeon features only one of the Hell and Pandemonium branches.
 %%%%
 Dis
 
@@ -150,7 +150,7 @@ Pandemonium is an infinite realm of pain and suffering. While there are many
 treasures to be found within, they are guarded by cruel demons and even
 crueller demon lords.
 
-Portals to Pandemonium are found abundantly in the Depths.
+A dungeon features only one of the Hell and Pandemonium branches.
 
 Pandemonium is endless. Each area of Pandemonium has a small chance of
 containing a portal back to the dungeon, either directly or via the Abyss.

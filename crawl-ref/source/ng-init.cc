@@ -84,12 +84,15 @@ void initialise_branch_depths()
 
     // You will get one of Shoals/Swamp and one of Spider/Snake.
     // This way you get one "water" branch and one "poison" branch.
+    // As of 0.20, you will also get only one of the two postgame branches.
     branch_type disabled_branch[] =
     {
         random_choose(BRANCH_SWAMP, BRANCH_SHOALS),
         random_choose(BRANCH_SNAKE, BRANCH_SPIDER),
+        random_choose(BRANCH_VESTIBULE, BRANCH_PANDEMONIUM),
     };
 
+    // Clears the entrances for each disabled branch.
     for (branch_type disabled : disabled_branch)
     {
         dprf("Disabling branch: %s", branches[disabled].shortname);

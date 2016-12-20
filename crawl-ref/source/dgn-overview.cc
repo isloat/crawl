@@ -300,7 +300,7 @@ static string _get_unseen_branches()
         if (!connected_branch_can_exist(branch))
             continue;
 
-        if (branch == BRANCH_VESTIBULE || !is_connected_branch(branch))
+        if (!is_connected_branch(branch))
             continue;
 
         // Did this branch actually make it into the game?
@@ -978,10 +978,12 @@ void unmarshallUniqueAnnotations(reader& inf)
 */
 bool connected_branch_can_exist(branch_type br)
 {
-    if (br == BRANCH_SPIDER && stair_level.count(BRANCH_SNAKE)
+    if (br == BRANCH_SPIDER && stair_level.count(BRANCH_SNAKE) // Spider / Snake
         || br == BRANCH_SNAKE && stair_level.count(BRANCH_SPIDER)
-        || br == BRANCH_SWAMP && stair_level.count(BRANCH_SHOALS)
-        || br == BRANCH_SHOALS && stair_level.count(BRANCH_SWAMP))
+        || br == BRANCH_SWAMP && stair_level.count(BRANCH_SHOALS) // Swamp / Shoals
+        || br == BRANCH_SHOALS && stair_level.count(BRANCH_SWAMP)
+        || br == BRANCH_VESTIBULE && stair_level.count(BRANCH_PANDEMONIUM) // Hell / Pan
+        || br == BRANCH_PANDEMONIUM && stair_level.count(BRANCH_VESTIBULE))
     {
         return false;
     }

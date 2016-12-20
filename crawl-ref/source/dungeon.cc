@@ -3383,9 +3383,9 @@ static void _place_branch_entrances(bool use_vaults)
     // Place actual branch entrances.
     for (branch_iterator it; it; ++it)
     {
-        // Vestibule and hells are placed by other means.
+        // Hells are placed by other means.
         // Likewise, if we already have an entrance, keep going.
-        if (it->id >= BRANCH_VESTIBULE && it->id <= BRANCH_LAST_HELL
+        if (it->id >= BRANCH_FIRST_HELL && it->id <= BRANCH_LAST_HELL
             || branch_entrance_placed[it->id])
         {
             continue;

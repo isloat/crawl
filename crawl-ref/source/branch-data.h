@@ -135,7 +135,7 @@ const Branch branches[NUM_BRANCHES] =
       BROWN, BROWN,
       'W', { RUNE_TOMB }, BRANCH_NOISE_QUIET },
 
-    { BRANCH_VESTIBULE, NUM_BRANCHES, 27, 27, 1, 27,
+    { BRANCH_VESTIBULE, BRANCH_DEPTHS, 1, 4, 1, 24,
       BFLAG_NO_ITEMS,
       DNGN_ENTER_HELL, DNGN_EXIT_HELL, NUM_FEATURES,
       "Hell", "the Vestibule of Hell", "Hell",
@@ -202,7 +202,7 @@ const Branch branches[NUM_BRANCHES] =
       BLACK, BLACK, // set specially
       'J', { RUNE_ABYSSAL }, BRANCH_NOISE_NORMAL },
 
-    { BRANCH_PANDEMONIUM, NUM_BRANCHES, -1, -1, 1, 24,
+    { BRANCH_PANDEMONIUM, BRANCH_DEPTHS, 1, 4, 1, 24,
       BFLAG_NO_XLEV_TRAVEL,
       DNGN_ENTER_PANDEMONIUM, DNGN_EXIT_PANDEMONIUM, DNGN_TRANSIT_PANDEMONIUM,
       "Pandemonium", "Pandemonium", "Pan",
